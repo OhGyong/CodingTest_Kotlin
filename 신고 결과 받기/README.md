@@ -1,6 +1,5 @@
 [신고 결과 받기](https://programmers.co.kr/learn/courses/30/lessons/92334)
 
-
 ```kotlin
     class Solution {
         fun solution(id_list: Array<String>, report: Array<String>, k: Int): IntArray {
