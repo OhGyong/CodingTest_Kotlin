@@ -31,11 +31,17 @@ arrayOf와 마찬가지로 제네릭이나 함수의 사용이 가능하다.
 
 ### 배열 출력
 
-java.util.Arrays을 호출하여 1차원 배열을 출력할 수 있다.
+java.util.Arrays을 호출하여 배열을 출력할 수 있다.
 
 ```kotlin
+
+    // 1차원 배열
     var arrayOf = arrayOf("Hello", "world")
     println(Arrays.toString(arrayOf)) // [Hello, world]
+
+    // 2차원 배열
+    var array = arrayOf(arrayOf(1,2,3), arrayOf(4,5,6), arrayOf(7,8,9))
+    println(array.contentDeepToString()) // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 ```
 
 ### 배열 크기
@@ -89,7 +95,51 @@ contains() 함수를 사용하면 배열에 해당 요소의 존재 유무에 �
     println(array.map{it->it*it}) // [1, 4, 9, 16, 25]
 ```
 
+### groupBy
+특정 조건을 만족하는 그룹으로 나눈 컬렉션을 반환한다.
 
+```kotlin
+    val array1 = arrayOf("muzi", "frodo", "apeach", "neo")
+    var array2 = arrayOf("muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi")
+
+    var array3 = array2.map{it.split(" ")}
+	println(array3) // [[muzi, frodo], [apeach, frodo], [frodo, neo], [muzi, neo], [apeach, muzi]]
+   	
+    var array4 = array3.groupBy{it[1]}
+    println(array4) // {frodo=[[muzi, frodo], [apeach, frodo]], neo=[[frodo, neo], [muzi, neo]], muzi=[[apeach, muzi]]}
+
+    var array = arrayOf(1, 2, 3, 4)
+    println(array.groupBy{2}) // {2=[1, 2, 3, 4]}
+```
+
+### distinct
+원소의 중복을 제거하여 새로운 컬렉션을 반환한다.
+
+```kotlin
+    var array = arrayOf(1, 2, 3, 4, 1, 2, 5, 6, 7)
+    println(array.distinct()) // [1, 2, 3, 4, 5, 6, 7]
+```
+
+
+### flatten
+컬렉션 안에 컬렉션이 들어있는 중첩 컬렉션을 하나의 컬렉션으로 반환한다.
+
+```kotlin
+    var array = arrayOf(arrayOf(1,2,3), arrayOf(4,5,6), arrayOf(7,8,9))
+    println(array.contentDeepToString()) // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    println(array.flatten()) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+
+### groupingBy
+eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소의 개수를 구할 때 사용된다.
+
+```kotlin
+    var array = arrayOf(1, 2, 3, 4, 5, 1, 1, 3)
+    println(array.groupingBy{it}.eachCount()) // {1=3, 2=1, 3=2, 4=1, 5=1}
+
+    var array = arrayOf("a", "b", "c", "a", "a", "b")
+    println(array.groupingBy{it}.eachCount()) // {a=3, b=2, c=1}
 ---
 
 ## :: (더블 콜론)
