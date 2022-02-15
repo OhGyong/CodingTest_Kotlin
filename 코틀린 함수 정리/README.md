@@ -140,6 +140,8 @@ eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소�
 
     var array = arrayOf("a", "b", "c", "a", "a", "b")
     println(array.groupingBy{it}.eachCount()) // {a=3, b=2, c=1}
+```
+
 ---
 
 ## :: (더블 콜론)
