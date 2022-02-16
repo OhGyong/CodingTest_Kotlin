@@ -172,3 +172,78 @@ eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소�
     println(c.plus(d)) // 3
 
 ```
+
+---
+## 문자열
+
+### 대문자, 소문자 전환
+toUpperCase, toLowerCase를 사용하여 전환을 할 수 있다.
+
+```kotlin
+   var string = "QWER asdf"	
+   println(string.toLowerCase()) // qwer asdf
+   println(string.toUpperCase()) // QWER ASDF
+```
+
+### replace
+코틀린에는 replaceAll이 없지만 replace로 그 기능을 대체할 수 있다.
+replace는 특정 문자열을 지정한 문자열로 바꿔준다.
+
+```kotlin
+   var string = "Hello World"	
+   println(string.replace("Hello", "Hi")) // Hi World
+```
+
+### slice
+문자열에서 부분 문자열을 추출할 때 사용한다.
+
+```kotlin
+   var string = "Hello World"	
+   println(string.slice(0..4)) // Hello
+```
+
+### substring
+slice와 유사하게 부분 문자열을 추출할 때 사용한다.</br>
+slice는 범위 지정을 반드시 해야하지만 substring은 입력값을 하나만 넣으면 자동으로 문자열의 끝까지 추출한다.
+
+```kotlin
+   var string = "Hello World"
+   println(string.substring(0..4)) // Hello
+   println(string.substring(2)) // llo World
+   println(string.substring(string.length-1)) // d
+```
+
+
+---
+
+## 정규식
+toRegex() 함수를 사용하여 코틀린에서 정규식을 사용할 수 있다.</br>
+**신규 아이디 추천**문제를 풀 때 사용한 정규식으로 참고해서 사용하자.
+
+### 알파벳 소문자, 숫자, -(빼기), _(밑줄), .(마침표)를 제외한 모든 문자를 제거하기
+[^ ]를 사용하면 [] 범위의 문자 집합을 제외한 것을 찾는다.
+
+```kotlin
+   var answer = "...!@BaT#*..y.abcdefghijklm"	
+   answer = answer.replace("[^a-z0-9_.-]".toRegex(), "")
+   println(answer) // ...a..y.abcdefghijklm
+```
+
+### 문자열에 2번 이상 반복되는 문자를 하나의 문자로 치환하기
+regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다.
+
+```kotlin
+   var answer = "...!@BaT#*..y.abcdefghijklm"	
+   answer = answer.replace("[.]{2,}".toRegex(), ".")
+   println(answer) // .!@BaT#*.y.abcdefghijklm
+```
+
+### 문자열의 처음이나 끝에 있는 단어 제거하기
+^은 문자열 시작을 나타내고 $은 문자열 종료를 나타낸다.</br>
+|은 or로 a|b라고 하면 a 또는 b와 일치하는 것을 찾는다.
+
+```kotlin
+   var answer = "...!@BaT#*..y.abcdefghijklm."	
+   answer = answer.replace("^[.]|[.]$".toRegex(), "")
+   println(answer) // ..!@BaT#*..y.abcdefghijklm
+```
