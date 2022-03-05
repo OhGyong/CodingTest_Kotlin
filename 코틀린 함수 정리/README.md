@@ -247,3 +247,12 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
    answer = answer.replace("^[.]|[.]$".toRegex(), "")
    println(answer) // ..!@BaT#*..y.abcdefghijklm
 ```
+
+
+---
+
+## 아스키 코드
+
+### 알파벳
+65~90 까지가 A에서 Z까지 이고</br>
+97~122 까지가 a에서 z까지 이다.
