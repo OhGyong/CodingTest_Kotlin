@@ -1,5 +1,7 @@
 [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061#)
 
+실패한 코드에서 테스트 1,4,5,6은 통과했지만 나머지가 실패했다.
+
 // 실패
 ```kotlin
     class Solution {
