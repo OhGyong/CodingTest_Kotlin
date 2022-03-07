@@ -76,7 +76,7 @@ contains() 함수를 사용하면 배열에 해당 요소의 존재 유무에 �
 
 ### 범위 자르기
 
-sliceArray()를 사용하면 Array의 원하는 범위 만큼을 배열로 반환해준다.
+sliceArray()를 사용하면 Array의 원하는 범위 만큼을 배열로 반환해준다. → slice()를 사용해도 똑같은 것으로 확인.
 
 ```kotlin
     var array = arrayOf(0,1,2,3,4,5)
