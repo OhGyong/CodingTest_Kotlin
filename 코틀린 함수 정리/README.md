@@ -74,6 +74,15 @@ contains() 함수를 사용하면 배열에 해당 요소의 존재 유무에 �
     println(array.contains(2)) // true
 ```
 
+### 범위 자르기
+
+sliceArray()를 사용하면 Array의 원하는 범위 만큼을 배열로 반환해준다.
+
+```kotlin
+    var array = arrayOf(0,1,2,3,4,5)
+    println(Arrays.toString(array.sliceArray(1..3))) // [1, 2, 3]
+```
+
 
 ---
 
