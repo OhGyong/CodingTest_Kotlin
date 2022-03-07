@@ -142,6 +142,37 @@ eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소�
     println(array.groupingBy{it}.eachCount()) // {a=3, b=2, c=1}
 ```
 
+
+### fold, foldIndexed
+fold()를 사용하면 람다식을 순서대로 적용한 결과를 얻을 수 있다.</br>
+foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 수 있다.
+
+```kotlin
+	val array = arrayOf(1,2,3,4)
+    
+    // fold(i)에서 i는 twiceTotal의 초기값, element는 요소
+    val useFold1 = array.fold(0){ twiceTotal, element -> twiceTotal + element*2}
+    val useFold2 = array.fold(5){ twiceTotal, element -> twiceTotal + element*2}
+    
+    println(useFold1) // 20 -> 0+2+4+6+8
+    println(useFold2) // 25 -> 5+2+4+6+8
+    
+    
+    // foldIndexed(i)에서 i는 result의 초기값, idx는 인덱스, element는 요소
+    val useFoldIndexed1 = array.foldIndexed(3){ idx, result, element ->
+        if(idx == 3) result*4
+        else result
+    }
+    
+    val useFoldIndexed2 = array.foldIndexed(0){ idx, result, element ->
+    	if(idx%2 == 1) result+element
+        else result
+    }
+    
+    println(useFoldIndexed1) // 12 -> 3*4
+    println(useFoldIndexed2) // 6 -> idx가 1,3일때 = element는 2와 4,즉 2+4
+```
+
 ---
 
 ## :: (더블 콜론)
