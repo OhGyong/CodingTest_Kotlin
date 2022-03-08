@@ -104,6 +104,25 @@ sliceArray()를 사용하면 Array의 원하는 범위 만큼을 배열로 반�
     println(array.map{it->it*it}) // [1, 4, 9, 16, 25]
 ```
 
+Key와 Value를 쌍으로 데이터를 저장하는 방식의 함수로 Key는 중복이 불가능하다.
+
+```kotlin
+    var map =  mapOf(
+        "치킨" to 15000,
+        "피자" to 11000,
+        "파스타" to 5000
+    )
+    println(map) // {치킨=15000, 피자=11000, 파스타=5000}
+    println(map.keys) // [치킨, 피자, 파스타]
+    println(map.values) // [15000, 11000, 5000]
+
+    /**
+    * Pair() 라는 컬렉션 함수는 map 처럼 key와 value로 이루어진 형태이기 때문에 map에 데이터를 넣을때 사용할 수 있다.
+    */
+    var mapWithPair = mapOf( Pair("치킨", 15000), Pair("피자", 11000), Pair("파스타", 5000))
+    println(mapWithPair) // {치킨=15000, 피자=11000, 파스타=5000}
+```
+
 ### groupBy
 특정 조건을 만족하는 그룹으로 나눈 컬렉션을 반환한다.
 
