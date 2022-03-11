@@ -315,3 +315,15 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
 ### 알파벳
 65~90 까지가 A에서 Z까지 이고</br>
 97~122 까지가 a에서 z까지 이다.
+
+## 기타
+
+### n진수 변환
+10진수를 다른 n진수로 변환하고 싶을때는 toString(n)에서 n에 원하는 값을 넣어주면 된다.</br>
+원래대로 돌리고 싶을때는 toInt(n)을 사용하면 된다.
+
+```kotlin
+	var a = 45
+    println(a.toString(8)) // 55
+    println(a.toString(8).toInt(8)) // 45
+```
