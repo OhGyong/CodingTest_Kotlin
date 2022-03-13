@@ -83,9 +83,9 @@ sliceArray()를 사용하면 Array의 원하는 범위 만큼을 배열로 반�
     println(Arrays.toString(array.sliceArray(1..3))) // [1, 2, 3]
 ```
 
+<br/><br/>
 
 ---
-
 ## 컬렉션 함수
 
 ### filter
@@ -201,8 +201,9 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
     println(useFoldIndexed2) // 6 -> idx가 1,3일때 = element는 2와 4,즉 2+4
 ```
 
----
+<br/><br/>
 
+---
 ## :: (더블 콜론)
 변수앞에 ::을 명시하면 변수를 객체로 액세스하여 객체에 대한 속성을 참조하게 된다.</br>
 
@@ -212,9 +213,10 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
     println(array1.filter(array2::contains)) // [1, 2, 5]
 ```
 
+
+<br/><br/>
+
 ---
-
-
 ## 연산자 함수
 
 ### plus
@@ -231,6 +233,8 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
     println(c.plus(d)) // 3
 
 ```
+
+<br/><br/>
 
 ---
 ## 문자열
@@ -272,9 +276,9 @@ slice는 범위 지정을 반드시 해야하지만 substring은 입력값을 �
    println(string.substring(string.length-1)) // d
 ```
 
+<br/><br/>
 
 ---
-
 ## 정규식
 toRegex() 함수를 사용하여 코틀린에서 정규식을 사용할 수 있다.</br>
 **신규 아이디 추천**문제를 풀 때 사용한 정규식으로 참고해서 사용하자.
@@ -308,8 +312,9 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
 ```
 
 
----
+<br/><br/>
 
+---
 ## 아스키 코드
 
 ### 알파벳
@@ -328,6 +333,10 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
     println(a.toString(8).toInt(8)) // 45
 ```
 
+
+<br/><br/>
+
+---
 ## 확장 함수
 
 ### let{}
