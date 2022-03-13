@@ -337,3 +337,14 @@ let은 자기 자신을 받아서 결과값을 반환한다.
 	val a = 3
     println( a.let{ if(it>3) 3 else 1}) // 1
 ```
+
+## 기타
+
+### Character.getNumericValue()
+문자열로 된 1 등의 자연수를 toInt()로 변경할 때 아스키 코드 값 때문에 원하는 값을 얻을 수 없다. 이럴 때 Character.getNumericValue()를 사용하면 정수형으로 변경할 수 있다.
+
+```kotlin
+	var num = '1'
+    println(num.toInt()) // 49
+    println(Character.getNumericValue(num)) // 1
+```
