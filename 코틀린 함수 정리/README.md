@@ -351,9 +351,10 @@ let은 자기 자신을 받아서 결과값을 반환한다.
 also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행 결과와 상관없이 객체 this를 반환한다.
 
 ```kotlin
-    var strings = arrayOf("a", "b", "c")
+    var strings = arrayOf("b", "c", "a")
     var newStrings = strings.also{it}
-    println(Arrays.toString(newStrings)) /// [a, b, c]
+    println(Arrays.toString(newStrings)) // [b, c, a]
+    println(Arrays.toString(strings.also{it.sortBy{it[0]}})) // [a, b, c]
 ```
 
 ## 기타
