@@ -148,7 +148,6 @@ Key와 Value를 쌍으로 데이터를 저장하는 방식의 함수로 Key는 �
     println(array.distinct()) // [1, 2, 3, 4, 5, 6, 7]
 ```
 
-
 ### flatten
 컬렉션 안에 컬렉션이 들어있는 중첩 컬렉션을 하나의 컬렉션으로 반환한다.
 
@@ -157,7 +156,6 @@ Key와 Value를 쌍으로 데이터를 저장하는 방식의 함수로 Key는 �
     println(array.contentDeepToString()) // [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     println(array.flatten()) // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
-
 
 ### groupingBy
 eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소의 개수를 구할 때 사용된다.
@@ -169,7 +167,6 @@ eachCount()를 통해 컬렉션 안에서 특정 조건에 해당하는 원소�
     var array = arrayOf("a", "b", "c", "a", "a", "b")
     println(array.groupingBy{it}.eachCount()) // {a=3, b=2, c=1}
 ```
-
 
 ### fold, foldIndexed
 fold()를 사용하면 람다식을 순서대로 적용한 결과를 얻을 수 있다.</br>
@@ -199,6 +196,15 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
     
     println(useFoldIndexed1) // 12 -> 3*4
     println(useFoldIndexed2) // 6 -> idx가 1,3일때 = element는 2와 4,즉 2+4
+```
+
+### 컬렉션 정렬
+
+```kotlin
+    // sortBy는 컬렉션 내에 여러 객체가 있을 때 그 객체를 기준으로 해서 정렬을 할 수 있다. 
+    var array = arrayOf("cd", "ac", "dz", "eq", "bx")
+    var newArray = array.also{it.sortBy{it[0]}}
+    println(Arrays.toString(newArray)) // [ac, bx, cd, dz, eq]
 ```
 
 <br/><br/>
