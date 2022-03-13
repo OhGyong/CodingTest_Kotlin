@@ -337,7 +337,7 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
 <br/><br/>
 
 ---
-## 확장 함수
+## 확장 함수 / 범위 지정 함수
 
 ### let{}
 let은 자기 자신을 받아서 결과값을 반환한다.
@@ -345,6 +345,15 @@ let은 자기 자신을 받아서 결과값을 반환한다.
 ```kotlin
 	val a = 3
     println( a.let{ if(it>3) 3 else 1}) // 1
+```
+
+### also{}
+also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행 결과와 상관없이 객체 this를 반환한다.
+
+```kotlin
+    var strings = arrayOf("a", "b", "c")
+    var newStrings = strings.also{it}
+    println(Arrays.toString(newStrings)) /// [a, b, c]
 ```
 
 ## 기타
