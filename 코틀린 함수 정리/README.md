@@ -327,3 +327,13 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
     println(a.toString(8)) // 55
     println(a.toString(8).toInt(8)) // 45
 ```
+
+## 확장 함수
+
+### let{}
+let은 자기 자신을 받아서 결과값을 반환한다.
+
+```kotlin
+	val a = 3
+    println( a.let{ if(it>3) 3 else 1}) // 1
+```
