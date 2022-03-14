@@ -214,6 +214,15 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
     println(Arrays.toString(newS2)) // [7, 5, 4, 3, 2, 1]
 ```
 
+### 컬렉션 반복
+컬렉션에서 forEach{} 문을 쓰면 for문을 쓰지 않고도 값을 구할 수 있다.<br/>
+만약 익덱스 정보가 필요하다면 forEachIndexed를 사용하면 된다.
+```kotlin
+    var array = arrayOf("a", "b", "c", "d")
+    array.forEach{print("$it ")} // a b c d 
+    array.forEachIndexed{index, it -> print("$index $it | ")} // 0 a | 1 b | 2 c | 3 d | 
+```
+
 <br/><br/>
 
 ---
