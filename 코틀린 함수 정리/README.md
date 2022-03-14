@@ -201,10 +201,17 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
 ### 컬렉션 정렬
 
 ```kotlin
-    // sortBy는 컬렉션 내에 여러 객체가 있을 때 그 객체를 기준으로 해서 정렬을 할 수 있다. 
+    // sortBy{}는 컬렉션 내에 여러 객체가 있을 때 그 객체를 기준으로 해서 정렬을 할 수 있다. 
     var array = arrayOf("cd", "ac", "dz", "eq", "bx")
     var newArray = array.also{it.sortBy{it[0]}}
     println(Arrays.toString(newArray)) // [ac, bx, cd, dz, eq]
+
+    // sortedArray()는 오름차순으로 정렬된 새로운 배열을 반환한다. 역배열은 Descending()을 붙인다.
+    var array = arrayOf(3,4,2,1,5,7)
+	var newS1 = array.sortedArray()
+    var newS2 = array.sortedArrayDescending()
+    println(Arrays.toString(newS1)) // [1, 2, 3, 4, 5, 7]
+    println(Arrays.toString(newS2)) // [7, 5, 4, 3, 2, 1]
 ```
 
 <br/><br/>
