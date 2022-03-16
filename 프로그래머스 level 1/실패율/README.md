@@ -20,7 +20,6 @@
             var failArray = Array(N,{0})
             var challengeArray = Array(N,{0})
             var failRateArray = DoubleArray(N,{0.0})
-
             var failIndexArray = Array(N, {i->i+1})
 
             // 스테이지에 도달했으나 아직 클리어하지 못한 플레이어의 수
