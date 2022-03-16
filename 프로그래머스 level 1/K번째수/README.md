@@ -7,7 +7,6 @@
     class Solution {
         fun solution(array: IntArray, commands: Array<IntArray>): IntArray {
             var answer = IntArray(commands.size)
-            
             var idx = 0
             commands.forEach{
                 var newArray = array.sliceArray((it[0]-1)..(it[1]-1)).sorted()

@@ -4,13 +4,8 @@
     class Solution {
         fun solution(numbers: IntArray): Int {
             var answer: Int = 0
-            
             var numArray = Array(10, {i -> i})
-            
-            numArray.forEach{
-                if(!numbers.contains(it)) answer +=it
-            }
-        
+            numArray.forEach{ if(!numbers.contains(it)) answer +=it }
             return answer
         }
     }

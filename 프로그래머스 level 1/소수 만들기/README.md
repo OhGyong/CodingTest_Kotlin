@@ -1,6 +1,5 @@
 [소수 만들기](https://programmers.co.kr/learn/courses/30/lessons/12977)
 
-
 나의 풀이
 ```kotlin
     class Solution {
