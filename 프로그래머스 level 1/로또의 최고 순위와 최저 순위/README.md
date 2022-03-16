@@ -11,7 +11,6 @@
         var syncCount = 0
         var zeroCount = 0
 
-
         for(lottosIndex in lottos){
             if(win_nums.contains(lottosIndex)){
                 syncCount++
