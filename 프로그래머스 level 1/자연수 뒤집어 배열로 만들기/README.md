@@ -6,7 +6,7 @@
         fun solution(n: Long): IntArray {
             var answer = mutableListOf<Int>()
             var newString = n.toString().reversed()
-            newString.forEach{answer.add(Character.getNumericValue(it))}
+            newString.forEach{ answer.add(Character.getNumericValue(it)) }
             return answer.toIntArray()
         }
     }

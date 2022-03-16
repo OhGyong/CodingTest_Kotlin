@@ -3,8 +3,6 @@
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(s: String): String {
-            return s.let{if(it.length%2==0) it[it.length/2-1].toString()+it[it.length/2].toString() else it[it.length/2].toString() } 
-        }
+        fun solution(s: String): String = s.let{if(it.length%2==0) it[it.length/2-1].toString()+it[it.length/2].toString() else it[it.length/2].toString() } 
     }
 ```
