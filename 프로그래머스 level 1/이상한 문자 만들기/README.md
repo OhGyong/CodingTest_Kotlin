@@ -6,8 +6,8 @@
 ```kotlin
     class Solution {
         fun solution(s: String): String {
-            var answer = ""
-            val array = s.split(" ")
+            var answer=""
+            val array=s.split(" ")
             array.forEach{
                 it.forEachIndexed{ index, it->
                     if(index%2==0) answer+=it.toUpperCase()

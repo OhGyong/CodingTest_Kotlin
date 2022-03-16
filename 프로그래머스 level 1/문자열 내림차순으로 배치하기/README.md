@@ -3,8 +3,6 @@
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(s: String): String {
-            return String(s.toCharArray().sortedArrayDescending())
-        }
+        fun solution(s: String): String = String(s.toCharArray().sortedArrayDescending())
     }
 ```

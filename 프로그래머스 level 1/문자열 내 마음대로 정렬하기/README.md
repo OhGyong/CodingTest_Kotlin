@@ -5,11 +5,10 @@ sortBy로 배열 내 문자열을 정렬하였다.
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(strings: Array<String>, n: Int): Array<String> {
-            return strings.also {
-                it.sort()
-                it.sortBy { it[n] }
-            }
+        fun solution(strings: Array<String>, n: Int): Array<String> = 
+        strings.also {
+            it.sort()
+            it.sortBy { it[n] }
         }
     }
 ```

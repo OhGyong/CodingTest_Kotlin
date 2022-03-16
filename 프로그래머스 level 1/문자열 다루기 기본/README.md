@@ -11,7 +11,7 @@
 ```kotlin
     class Solution {
         fun solution(s: String): Boolean {
-            var answer = true
+            var answer=true
             if(s.length == 4 || s.length ==6){
                 var number = s.replace("[^0-9]".toRegex(),"")
                 if(s != number) answer=false 

@@ -3,8 +3,5 @@
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(s: String): Int {
-            return s.toInt()
-        }
-    }
+        fun solution(s: String): Int = s.toInt()
 ```

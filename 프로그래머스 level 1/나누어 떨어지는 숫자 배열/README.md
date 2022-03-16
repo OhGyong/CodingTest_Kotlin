@@ -5,7 +5,6 @@
     class Solution {
         fun solution(arr: IntArray, divisor: Int): IntArray {
             var answer = mutableListOf<Int>()
-            
             var total = 0
             arr.forEach{
                 if(it%divisor == 0){
