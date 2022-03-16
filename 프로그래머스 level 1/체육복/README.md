@@ -12,12 +12,9 @@
     class Solution {
         fun solution(n: Int, lost: IntArray, reserve: IntArray): Int {
             var answer = 0
-            
             var totalStudent = Array(n, {1})
-        
             lost.forEach{ totalStudent[it-1] += -1  }
             reserve.forEach{ totalStudent[it-1]++ }
-
             for(i in totalStudent.indices){
                 // 도난 당한 학생이면
                 if(totalStudent[i]==0){

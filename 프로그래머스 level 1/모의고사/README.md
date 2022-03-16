@@ -15,7 +15,6 @@
             var person2Answers = 0
             var person3Answers = 0
             
-            
             for(i in answers.indices){
                 if(answers[i] == person1[i%person1.size]) person1Answers++
                 if(answers[i] == person2[i%person2.size]) person2Answers++
