@@ -1,7 +1,6 @@
 [시저 암호](https://programmers.co.kr/learn/courses/30/lessons/12926)
 
-처음에 while문으로 z(Z)가 되었을 때 a(A)로 변경하여 구하려 했는데
-아스키 코드를 사용해서 구하는 것이 훨씬 편하다.
+처음에 while문으로 z(Z)가 되었을 때 a(A)로 변경하여 구하려 했는데 아스키 코드를 사용해서 구하는 것이 훨씬 편하다.
 
 ```kotlin
    class Solution {
