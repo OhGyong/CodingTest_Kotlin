@@ -2,9 +2,7 @@
 
 ```kotlin
     class Solution {
-        fun solution(s: String): Int {
-            var answer: Int = 0
-            answer = s.replace("zero".toRegex(),"0")
+        fun solution(s: String): Int = s.replace("zero".toRegex(),"0")
                     .replace("one".toRegex(),"1")
                     .replace("two".toRegex(),"2")
                     .replace("three".toRegex(),"3")
@@ -15,7 +13,5 @@
                     .replace("eight".toRegex(),"8")
                     .replace("nine".toRegex(),"9")
                     .toInt()
-            return answer
-        }
     }
 ```
