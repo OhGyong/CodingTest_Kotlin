@@ -12,7 +12,6 @@
         fun gcm(a: Int, b: Int): Int {
             var maximum = Math.max(a, b)
             var minimum = Math.min(a, b)
-
             if (minimum == 0) {
                 return maximum
             } else {
@@ -20,7 +19,6 @@
             }
         }
 
-        fun lcm(a: Int, b: Int): Int =
-            (a * b) / gcm(a, b)
+        fun lcm(a: Int, b: Int): Int = (a * b) / gcm(a, b)
     }
 ```

@@ -3,9 +3,6 @@
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(n: Long): Long {
-            var answer: Long = n.toString().map{it}.sortedDescending().joinToString("").toLong()
-            return answer
-        }
+        fun solution(n: Long): Long = n.toString().map{it}.sortedDescending().joinToString("").toLong()
     }
 ```

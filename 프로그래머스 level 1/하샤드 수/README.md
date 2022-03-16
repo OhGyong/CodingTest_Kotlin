@@ -4,8 +4,8 @@
 ```kotlin
     class Solution {
         fun solution(x: Int): Boolean {
-            var answer = true
-            var num = 0
+            var answer=true
+            var num=0
             x.toString().forEach{ num+=Character.getNumericValue(it) }
             if(x%num!=0) answer = false
             return answer

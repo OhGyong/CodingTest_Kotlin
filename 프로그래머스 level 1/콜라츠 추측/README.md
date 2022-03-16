@@ -4,15 +4,15 @@
 ```kotlin
     class Solution {
         fun solution(num: Int): Int {
-            var count = 0
-            var number:Long = num.toLong()
+            var count=0
+            var number:Long=num.toLong()
             while(number!=1.toLong()){
                 if(count==500){
                     count=-1
                     break
                 }
                 if(number%2.toLong()==0.toLong()) number = number/2.toLong() 
-                else number = number*3 + 1
+                else number=number*3 + 1
                 count++
         }
             return count

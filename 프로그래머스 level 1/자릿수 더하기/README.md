@@ -4,7 +4,7 @@
 ```kotlin
     class Solution {
         fun solution(n: Int): Int {
-            var answer = 0
+            var answer=0
             (n.toString()).forEach{answer+=Character.getNumericValue(it)}
             return answer
         }

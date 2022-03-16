@@ -3,9 +3,6 @@
 나의 풀이
 ```kotlin
     class Solution {
-        fun solution(arr: IntArray): Double {
-            var answer = arr.sum().toDouble()/arr.size.toDouble()
-            return answer
-        }
+        fun solution(arr: IntArray): Double = arr.sum().toDouble()/arr.size.toDouble()
     }
 ```
