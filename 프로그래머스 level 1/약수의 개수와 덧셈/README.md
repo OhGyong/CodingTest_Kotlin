@@ -10,11 +10,8 @@
                 for(j in 1..i){
                     if(i%j==0) divisor++
                 }
-                if(divisor%2==0){
-                    answer+=i
-                }else{
-                    answer-=i
-                }
+                if(divisor%2==0) answer+=i
+                else answer-=i
             }
             return answer
         }
