@@ -7,10 +7,8 @@ sizes라는 이차원 배열에서 가로길이와 세로길이 중에서 더 �
 ```kotlin
     class Solution {
         fun solution(sizes: Array<IntArray>): Int {
-            
             var wMax = 0
             var hMax = 0
-
             for(i in sizes){
                 var temp = 0
                 if(i[0]>i[1]){

@@ -1,4 +1,4 @@
-[두 개 뽑아서 더하기](https://programmers.co.kr/learn/courses/30/lessons/12901)
+[2016년](https://programmers.co.kr/learn/courses/30/lessons/12901)
 
 나의 풀이
 ```kotlin
