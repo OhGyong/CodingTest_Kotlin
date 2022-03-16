@@ -1,5 +1,7 @@
 [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256#)
 
+키패드에서 1은 [0,0], 2는 [0,1], 4는 [1,0]으로 가로 방향이 y축, 세로 방향이 x축이라고 생각하고 좌표를 통해 거리 계산을 통해 해결하였다.
+
 ```kotlin
     import kotlin.math.abs
 
