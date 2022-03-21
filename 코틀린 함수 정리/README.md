@@ -389,3 +389,10 @@ also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행
     println(num.toInt()) // 49
     println(Character.getNumericValue(num)) // 1
 ```
+
+### maxOf(), minOf()
+인수로 입력된 값 중 maxOf()는 가장 큰 값을, minOf()는 가장 작은 값을 반환한다.
+
+```kotlin
+    println("max:${maxOf(1,2,3,4)} min:${minOf(1,2,3,4)}") // max:4 min:1
+```
