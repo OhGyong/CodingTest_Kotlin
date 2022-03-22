@@ -375,8 +375,9 @@ also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행
 ```kotlin
     var strings = arrayOf("b", "c", "a")
     var newStrings = strings.also{it}
-    println(Arrays.toString(newStrings)) // [b, c, a]
     println(Arrays.toString(strings.also{it.sortBy{it[0]}})) // [a, b, c]
+    println(Arrays.toString(newStrings)) // [b, c, a]
+
 ```
 
 ## 기타
