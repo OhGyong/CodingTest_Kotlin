@@ -24,3 +24,40 @@
     }
 ```
 ![image](https://user-images.githubusercontent.com/52282493/158790054-7d6b9c4c-ea6f-4528-9343-99d451fb9b24.png)
+
+<br/><br/>
+
+---
+
+## 유클리드 호제법(Euclidean algorithm)
+두 자연수의 최대공약수를 구하는 알고리즘이다.
+
+재귀로 구하는 방법(단, a>b)
+```kotlin
+    fun main(){
+        println(gcd(12,9)) // 3
+    }
+
+    fun gcd(a: Int, b: Int): Int{
+        if(b!=0) return gcd(b, a%b)
+        else return a
+    }
+```
+
+루프문으로 구하는 방법(단, a>b)
+```kotlin
+    fun main(){
+        println(gcd(12,9))
+    }
+
+    fun gcd(a: Int, b: Int): Int{
+        var a_=a
+        var b_=b
+        while(true){
+            var k = a_%b_
+            if(k==0) return b_
+            a_=b_
+            b_=k
+        }
+    } 
+```
