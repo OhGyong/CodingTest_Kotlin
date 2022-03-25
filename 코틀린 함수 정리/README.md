@@ -397,3 +397,12 @@ also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행
 ```kotlin
     println("max:${maxOf(1,2,3,4)} min:${minOf(1,2,3,4)}") // max:4 min:1
 ```
+
+### coerceAtMost()
+값을 비교하여 더 작은 값을 반환한다.
+
+```kotlin
+    var k = 5
+    println(k.coerceAtMost(6)) // 5
+    println(k.coerceAtMost(2)) // 2
+```
