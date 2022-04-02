@@ -123,6 +123,17 @@ Key와 Value를 쌍으로 데이터를 저장하는 방식의 함수로 Key는 �
     println(mapWithPair) // {치킨=15000, 피자=11000, 파스타=5000}
 ```
 
+### hashMap
+key, value 쌍의 Map 인터페이스
+
+```kotlin
+    var hashMap = HashMap<String, String>()
+    hashMap["first"] = "1"
+    hashMap["second"] = "2"
+    println(hashMap) // {first=1, second=2}
+    println(hashMap.get("first")) // 1
+```
+
 ### groupBy
 특정 조건을 만족하는 그룹으로 나눈 컬렉션을 반환한다.
 
