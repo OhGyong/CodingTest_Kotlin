@@ -48,7 +48,7 @@ java.util.Arrays을 호출하여 배열을 출력할 수 있다.
 
 ```kotlin
     var array = IntArray(5)
-	array.size // 5
+    array.size // 5
 ```
 
 ### 요소 추가
@@ -142,7 +142,7 @@ key, value 쌍의 Map 인터페이스
     var array2 = arrayOf("muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi")
 
     var array3 = array2.map{it.split(" ")}
-	println(array3) // [[muzi, frodo], [apeach, frodo], [frodo, neo], [muzi, neo], [apeach, muzi]]
+    println(array3) // [[muzi, frodo], [apeach, frodo], [frodo, neo], [muzi, neo], [apeach, muzi]]
    	
     var array4 = array3.groupBy{it[1]}
     println(array4) // {frodo=[[muzi, frodo], [apeach, frodo]], neo=[[frodo, neo], [muzi, neo]], muzi=[[apeach, muzi]]}
@@ -184,7 +184,7 @@ fold()를 사용하면 람다식을 순서대로 적용한 결과를 얻을 수 
 foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 수 있다.
 
 ```kotlin
-	val array = arrayOf(1,2,3,4)
+    val array = arrayOf(1,2,3,4)
     
     // fold(i)에서 i는 twiceTotal의 초기값, element는 요소
     val useFold1 = array.fold(0){ twiceTotal, element -> twiceTotal + element*2}
@@ -219,7 +219,7 @@ foldIndexed()는 람다식에서 인덱스와 값을 동시에 인자로 받을 
 
     // sortedArray()는 오름차순으로 정렬된 새로운 배열을 반환한다. 역배열은 Descending()을 붙인다.
     var array = arrayOf(3,4,2,1,5,7)
-	var newS1 = array.sortedArray()
+    var newS1 = array.sortedArray()
     var newS2 = array.sortedArrayDescending()
     println(Arrays.toString(newS1)) // [1, 2, 3, 4, 5, 7]
     println(Arrays.toString(newS2)) // [7, 5, 4, 3, 2, 1]
@@ -376,7 +376,7 @@ regex{n, }은 regex라는 표현식이 n번 이상 일치되는 것을 찾는다
 let은 자기 자신을 받아서 결과값을 반환한다.
 
 ```kotlin
-	val a = 3
+    val a = 3
     println( a.let{ if(it>3) 3 else 1}) // 1
 ```
 
@@ -397,7 +397,7 @@ also는 let과 비슷해 보일 수 있지만 let은 블록 안의 코드 수행
 문자열로 된 1 등의 자연수를 toInt()로 변경할 때 아스키 코드 값 때문에 원하는 값을 얻을 수 없다. 이럴 때 Character.getNumericValue()를 사용하면 정수형으로 변경할 수 있다.
 
 ```kotlin
-	var num = '1'
+    var num = '1'
     println(num.toInt()) // 49
     println(Character.getNumericValue(num)) // 1
 ```
