@@ -1,5 +1,6 @@
 **평균 구하기** 39p<br/>
 
+```kotlin
 fun main() {
     val firstLine = readLine()
     val secondLine = readLine()
@@ -20,3 +21,4 @@ fun main() {
 
     println(newAvg)
 }
+```
