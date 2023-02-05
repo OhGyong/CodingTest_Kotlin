@@ -1,4 +1,4 @@
-### 투 포인터 사용
+### 투 포인터
 ```kotlin
 fun main() {
     val br = BufferedReader( InputStreamReader(System.`in`) )
